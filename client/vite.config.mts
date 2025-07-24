@@ -1,11 +1,12 @@
 import { resolve } from "node:path";
-import { defineConfig, type Plugin, type ServerOptions } from "vite";
-import stripBlockPlugin from "vite-plugin-strip-block";
+import { type Plugin, type ServerOptions, defineConfig } from "vite";
 import { getConfig } from "../config";
 import { version } from "../package.json";
 import { GIT_VERSION } from "../server/src/utils/gitRevision";
 import { codefendPlugin } from "./vite-plugins/codefendPlugin";
 import { ejsPlugin } from "./vite-plugins/ejsPlugin";
+
+import stripBlockPlugin from "vite-plugin-strip-block";
 
 export const SplashThemes = {
     main: {
@@ -25,7 +26,7 @@ export const SplashThemes = {
         splashBg: "/img/main_splash_0_7_0.png",
     },
     cobalt: {
-        menuMusic: "audio/ambient/menu_music_01.mp3",
+        menuMusic: "audio/ambient/menu_music_03.mp3",
         splashBg: "/img/main_splash_cobalt.png",
     },
     snow: {
@@ -35,6 +36,14 @@ export const SplashThemes = {
     spring: {
         menuMusic: "audio/ambient/menu_music_01.mp3",
         splashBg: "/img/main_splash_7_3.png",
+    },
+    ultraguns: {
+        menuMusic: "audio/ambient/menu_music_04.mp3",
+        splashBg: "/img/main_splash_ultraguns.png",
+    },
+    squid: {
+        menuMusic: "audio/ambient/menu_music_02.mp3",
+        splashBg: "/img/main_splash_squid.png",
     },
 };
 
