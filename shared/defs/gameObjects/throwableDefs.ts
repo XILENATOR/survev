@@ -28,7 +28,7 @@ export interface ThrowableDef {
     lootImg: {
         sprite: string;
         tint: number;
-        border: "loot-circle-outer-01.img";
+        border: string;
         borderTint: number;
         scale: number;
         rot?: number;
@@ -95,7 +95,7 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
         speed: { equip: 0, attack: 0 },
         lootImg: {
             sprite: "loot-throwable-frag.img",
-            tint: 0xff00,
+            tint: 65280,
             border: "loot-circle-outer-01.img",
             borderTint: 0,
             scale: 0.2,
@@ -163,7 +163,7 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
         speed: { equip: 0, attack: 0 },
         lootImg: {
             sprite: "loot-throwable-mirv.img",
-            tint: 0xff00,
+            tint: 65280,
             border: "loot-circle-outer-01.img",
             borderTint: 0,
             scale: 0.2,
@@ -231,7 +231,7 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
         speed: { equip: 0, attack: 0 },
         lootImg: {
             sprite: "loot-throwable-frag.img",
-            tint: 0xff00,
+            tint: 65280,
             border: "loot-circle-outer-01.img",
             borderTint: 0,
             scale: 0.2,
@@ -273,7 +273,7 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
         speed: { equip: 0, attack: 0 },
         lootImg: {
             sprite: "loot-throwable-frag.img",
-            tint: 0xff00,
+            tint: 65280,
             border: "loot-circle-outer-01.img",
             borderTint: 0,
             scale: 0.2,
@@ -313,7 +313,7 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
         speed: { equip: 0, attack: 0 },
         lootImg: {
             sprite: "loot-throwable-smoke.img",
-            tint: 0xff00,
+            tint: 65280,
             border: "loot-circle-outer-01.img",
             borderTint: 0,
             scale: 0.2,
@@ -380,7 +380,7 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
         speed: { equip: 0, attack: 0 },
         lootImg: {
             sprite: "loot-throwable-strobe.img",
-            tint: 0xff00,
+            tint: 65280,
             border: "loot-circle-outer-01.img",
             borderTint: 0,
             scale: 0.2,
@@ -451,7 +451,7 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
         speed: { equip: 0, attack: 0 },
         lootImg: {
             sprite: "loot-throwable-snowball.img",
-            tint: 0xff00,
+            tint: 65280,
             border: "loot-circle-outer-01.img",
             borderTint: 0,
             scale: 0.2,
@@ -516,7 +516,7 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
         speed: { equip: 0, attack: 0 },
         lootImg: {
             sprite: "loot-throwable-snowball.img",
-            tint: 0xff00,
+            tint: 65280,
             border: "loot-circle-outer-01.img",
             borderTint: 0,
             scale: 0.2,
@@ -562,7 +562,7 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
         speed: { equip: 0, attack: 0 },
         lootImg: {
             sprite: "loot-throwable-potato.img",
-            tint: 0xff00,
+            tint: 65280,
             border: "loot-circle-outer-01.img",
             borderTint: 0,
             scale: 0.2,
@@ -628,7 +628,7 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
         speed: { equip: 0, attack: 0 },
         lootImg: {
             sprite: "loot-throwable-potato.img",
-            tint: 0xff00,
+            tint: 65280,
             border: "loot-circle-outer-01.img",
             borderTint: 0,
             scale: 0.2,
@@ -673,7 +673,7 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
         speed: { equip: 0, attack: 0 },
         lootImg: {
             sprite: "loot-throwable-potato.img",
-            tint: 0xff00,
+            tint: 65280,
             border: "loot-circle-outer-01.img",
             borderTint: 0,
             scale: 0.2,
@@ -695,7 +695,7 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
             maxLength: 25,
             width: 2.8,
             alpha: 1,
-            tint: 0x5a4636,
+            tint: 5916214,
         },
     },
     potato_smgshot: {
@@ -724,7 +724,7 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
         speed: { equip: 0, attack: 0 },
         lootImg: {
             sprite: "loot-throwable-potato.img",
-            tint: 0xff00,
+            tint: 65280,
             border: "loot-circle-outer-01.img",
             borderTint: 0,
             scale: 0.2,
@@ -746,7 +746,7 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
             maxLength: 40,
             width: 2.8,
             alpha: 1,
-            tint: 0x5a5636,
+            tint: 5920310,
         },
     },
     bomb_iron: {
@@ -773,7 +773,7 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
         speed: { equip: 0, attack: 0 },
         lootImg: {
             sprite: "loot-throwable-frag.img",
-            tint: 0xff00,
+            tint: 65280,
             border: "loot-circle-outer-01.img",
             borderTint: 0,
             scale: 0.2,
@@ -784,6 +784,387 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
             tint: 0xffffff,
         },
         handImg: {},
+        useThrowParticles: true,
+        sound: {
+            pullPin: "frag_pin_01",
+            throwing: "frag_throw_01",
+            pickup: "frag_pickup_01",
+            deploy: "frag_deploy_01",
+        },
+    },
+    mirv_ultra: {
+        name: "Ultra MIRV Grenade",
+        type: "throwable",
+        quality: 1,
+        explosionType: "explosion_mirv",
+        inventoryOrder: 2,
+        cookable: true,
+        explodeOnImpact: false,
+        playerCollision: false,
+        fuseTime: 4,
+        aimDistance: 0,
+        rad: 1,
+        throwPhysics: {
+            playerVelMult: 0.6,
+            velZ: 5,
+            speed: 20,
+            spinVel: 10 * Math.PI,
+            spinDrag: 1,
+        },
+        numSplit: 4,
+        splitType: "mirv",
+        speed: { equip: 0, attack: 0 },
+        lootImg: {
+            sprite: "loot-throwable-mirv.img",
+            tint: 65280,
+            border: "loot-circle-outer-05.img",
+            borderTint: 0xffffff,
+            scale: 0.2,
+        },
+        worldImg: {
+            sprite: "proj-mirv-nopin-nolever.img",
+            scale: 0.13,
+            tint: 0xffffff,
+        },
+        handImg: {
+            equip: {
+                right: {
+                    sprite: "proj-mirv-pin.img",
+                    pos: { x: 4.2, y: 4.2 },
+                    scale: 0.15,
+                },
+                left: { sprite: "none" },
+            },
+            cook: {
+                right: {
+                    sprite: "proj-mirv-nopin.img",
+                    pos: { x: 4.2, y: 4.2 },
+                    scale: 0.15,
+                },
+                left: {
+                    sprite: "proj-frag-pin-part.img",
+                    pos: { x: 4.2, y: 4.2 },
+                    scale: 0.15,
+                },
+            },
+            throwing: {
+                right: { sprite: "none" },
+                left: { sprite: "none" },
+            },
+        },
+        useThrowParticles: true,
+        sound: {
+            pullPin: "frag_pin_01",
+            throwing: "frag_throw_01",
+            pickup: "frag_pickup_01",
+            deploy: "frag_deploy_01",
+        },
+    },
+    golden_grenade: {
+        name: "Golden Grenade",
+        type: "throwable",
+        quality: 1,
+        explosionType: "explosion_frag",
+        inventoryOrder: 2,
+        cookable: false,
+        explodeOnImpact: false,
+        playerCollision: false,
+        fuseTime: 2,
+        aimDistance: 0,
+        rad: 1,
+        throwPhysics: {
+            playerVelMult: 0.6,
+            velZ: 5,
+            speed: 20,
+            spinVel: 10 * Math.PI,
+            spinDrag: 1,
+        },
+        numSplit: 1,
+        splitType: "golden_grenade",
+        speed: { equip: 0, attack: 0 },
+        lootImg: {
+            sprite: "loot-throwable-mirv.img",
+            tint: 65280,
+            border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.2,
+        },
+        worldImg: {
+            sprite: "proj-mirv-nopin-nolever.img",
+            scale: 0.13,
+            tint: 0xffffff,
+        },
+        handImg: {
+            equip: {
+                right: {
+                    sprite: "proj-mirv-pin.img",
+                    pos: { x: 4.2, y: 4.2 },
+                    scale: 0.15,
+                },
+                left: { sprite: "none" },
+            },
+            cook: {
+                right: {
+                    sprite: "proj-mirv-nopin.img",
+                    pos: { x: 4.2, y: 4.2 },
+                    scale: 0.15,
+                },
+                left: {
+                    sprite: "proj-frag-pin-part.img",
+                    pos: { x: 4.2, y: 4.2 },
+                    scale: 0.15,
+                },
+            },
+            throwing: {
+                right: { sprite: "none" },
+                left: { sprite: "none" },
+            },
+        },
+        useThrowParticles: true,
+        sound: {
+            pullPin: "frag_pin_01",
+            throwing: "frag_throw_01",
+            pickup: "frag_pickup_01",
+            deploy: "frag_deploy_01",
+        },
+    },
+    launcher_frag: {
+        name: "Frag Grenade",
+        type: "throwable",
+        quality: 0,
+        explosionType: "explosion_launcher",
+        inventoryOrder: 99,
+        cookable: false,
+        noPotatoSwap: true,
+        explodeOnImpact: true,
+        playerCollision: false,
+        fuseTime: 9999,
+        aimDistance: 0,
+        rad: 1,
+        throwPhysics: {
+            playerVelMult: 0.6,
+            velZ: 5,
+            speed: 40,
+            spinVel: 10 * Math.PI,
+            spinDrag: 1,
+        },
+        speed: { equip: 0, attack: 0 },
+        lootImg: {
+            sprite: "loot-throwable-frag.img",
+            tint: 65280,
+            border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.2,
+        },
+        worldImg: {
+            sprite: "proj-frag-nopin-nolever-01.img",
+            scale: 0.12,
+            tint: 0xffffff,
+        },
+        handImg: {
+            equip: {
+                right: {
+                    sprite: "proj-frag-pin-01.img",
+                    pos: { x: 4.2, y: 4.2 },
+                    scale: 0.14,
+                },
+                left: { sprite: "none" },
+            },
+            cook: {
+                right: {
+                    sprite: "proj-frag-nopin-01.img",
+                    pos: { x: 4.2, y: 4.2 },
+                    scale: 0.14,
+                },
+                left: {
+                    sprite: "proj-frag-pin-part.img",
+                    pos: { x: 4.2, y: 4.2 },
+                    scale: 0.14,
+                },
+            },
+            throwing: {
+                right: { sprite: "none" },
+                left: { sprite: "none" },
+            },
+        },
+        useThrowParticles: true,
+        sound: {
+            pullPin: "frag_pin_01",
+            throwing: "frag_throw_01",
+            pickup: "frag_pickup_01",
+            deploy: "frag_deploy_01",
+        },
+    },
+    fireworks: {
+        name: "Fireworks",
+        type: "throwable",
+        quality: 1,
+        explosionType: "explosion_fireworks",
+        inventoryOrder: 2,
+        cookable: true,
+        explodeOnImpact: false,
+        playerCollision: false,
+        fuseTime: 4,
+        aimDistance: 0,
+        rad: 1,
+        throwPhysics: {
+            playerVelMult: 0.6,
+            velZ: 5,
+            speed: 25,
+            spinVel: 6 * Math.PI,
+            spinDrag: 1,
+        },
+        numSplit: 4,
+        splitType: "mirv_ultra",
+        speed: { equip: 0, attack: 0 },
+        lootImg: {
+            sprite: "loot-throwable-strobe.img",
+            tint: 65280,
+            border: "loot-circle-outer-05.img",
+            borderTint: 0xffffff,
+            scale: 0.2,
+        },
+        worldImg: {
+            sprite: "proj-strobe-armed.img",
+            scale: 0.12,
+            tint: 0xffffff,
+        },
+        handImg: {
+            equip: {
+                right: {
+                    sprite: "proj-strobe-unarmed.img",
+                    pos: { x: 3, y: 4.2 },
+                    scale: 0.14,
+                },
+                left: { sprite: "none" },
+            },
+            cook: {
+                right: {
+                    sprite: "proj-strobe-arming.img",
+                    pos: { x: 3, y: 4.2 },
+                    scale: 0.14,
+                },
+                left: {
+                    sprite: "",
+                    pos: { x: 3, y: 4.2 },
+                    scale: 0.14,
+                },
+            },
+            throwing: {
+                right: { sprite: "none" },
+                left: { sprite: "none" },
+            },
+        },
+        useThrowParticles: false,
+        sound: {
+            pullPin: "strobe_click_01",
+            throwing: "frag_throw_01",
+            pickup: "frag_pickup_01",
+            deploy: "frag_deploy_01",
+        },
+    },
+    launcher_mirv: {
+        name: "MIRV Grenade",
+        type: "throwable",
+        quality: 1,
+        explosionType: "explosion_mirv",
+        inventoryOrder: 2,
+        cookable: true,
+        explodeOnImpact: true,
+        playerCollision: false,
+        fuseTime: 4,
+        aimDistance: 0,
+        rad: 1,
+        throwPhysics: {
+            playerVelMult: 0.6,
+            velZ: 5,
+            speed: 40,
+            spinVel: 10 * Math.PI,
+            spinDrag: 1,
+        },
+        numSplit: 6,
+        splitType: "launcher_mirv_mini",
+        speed: { equip: 0, attack: 0 },
+        lootImg: {
+            sprite: "loot-throwable-mirv.img",
+            tint: 65280,
+            border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.2,
+        },
+        worldImg: {
+            sprite: "proj-mirv-nopin-nolever.img",
+            scale: 0.13,
+            tint: 0xffffff,
+        },
+        handImg: {
+            equip: {
+                right: {
+                    sprite: "proj-mirv-pin.img",
+                    pos: { x: 4.2, y: 4.2 },
+                    scale: 0.15,
+                },
+                left: { sprite: "none" },
+            },
+            cook: {
+                right: {
+                    sprite: "proj-mirv-nopin.img",
+                    pos: { x: 4.2, y: 4.2 },
+                    scale: 0.15,
+                },
+                left: {
+                    sprite: "proj-frag-pin-part.img",
+                    pos: { x: 4.2, y: 4.2 },
+                    scale: 0.15,
+                },
+            },
+            throwing: {
+                right: { sprite: "none" },
+                left: { sprite: "none" },
+            },
+        },
+        useThrowParticles: true,
+        sound: {
+            pullPin: "frag_pin_01",
+            throwing: "frag_throw_01",
+            pickup: "frag_pickup_01",
+            deploy: "frag_deploy_01",
+        },
+    },
+    launcher_mirv_mini: {
+        name: "MIRV Grenade",
+        type: "throwable",
+        quality: 0,
+        explosionType: "explosion_mirv_mini",
+        inventoryOrder: 99,
+        cookable: true,
+        noPotatoSwap: true,
+        explodeOnImpact: true,
+        playerCollision: false,
+        fuseTime: 1.8,
+        fuseVariance: 0.3,
+        aimDistance: 0,
+        rad: 1,
+        throwPhysics: {
+            playerVelMult: 0.6,
+            velZ: 5,
+            speed: 20,
+            spinVel: 10 * Math.PI,
+            spinDrag: 1,
+        },
+        speed: { equip: 0, attack: 0 },
+        lootImg: {
+            sprite: "loot-throwable-frag.img",
+            tint: 65280,
+            border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.2,
+        },
+        worldImg: {
+            sprite: "proj-mirv-mini-01.img",
+            scale: 0.12,
+            tint: 0xffffff,
+        },
         useThrowParticles: true,
         sound: {
             pullPin: "frag_pin_01",

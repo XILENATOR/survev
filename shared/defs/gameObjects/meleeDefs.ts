@@ -1,4 +1,3 @@
-import { Rarity } from "../../gameConfig";
 import { defineSkin } from "../../utils/util";
 import type { Vec2 } from "../../utils/v2";
 
@@ -1044,17 +1043,74 @@ const BaseDefs: Record<string, MeleeDef> = {
             tint: 0xffffff,
         },
     },
+    crowbar_garry: {
+        name: "Garry's Crowbar",
+        type: "melee",
+        quality: 1,
+        cleave: true,
+        autoAttack: false,
+        armorPiercing: true,
+        stonePiercing: true,
+        switchDelay: 0.25,
+        damage: 999,
+        obstacleDamage: 999,
+        headshotMult: 999,
+        noPotatoSwap: false,
+        attack: {
+            offset: {
+                x: 1.25,
+                y: 0,
+            },
+            rad: 1.25,
+            damageTimes: [0.12],
+            cooldownTime: 0.3,
+        },
+        speed: {
+            equip: 1,
+        },
+        anim: {
+            idlePose: "fists",
+            attackAnims: ["cut", "cutReverseShort"],
+        },
+        sound: {
+            pickup: "frag_pickup_01",
+            swing: "knife_swing_01",
+            deploy: "frag_pickup_01",
+            playerHit: "crowbar_hit_01",
+        },
+        lootImg: {
+            sprite: "loot-melee-crowbar-scout.img",
+            tint: 0xffffff,
+            border: "loot-circle-outer-05.img",
+            borderTint: 0xffffff,
+            scale: 0.3,
+            rot: 0.785,
+        },
+        worldImg: {
+            sprite: "loot-melee-crowbar-scout.img",
+            pos: {
+                x: -1,
+                y: -10,
+            },
+            rot: 1,
+            scale: {
+                x: 0.35,
+                y: 0.35,
+            },
+            tint: 0xffffff,
+        },
+    },
 };
 
 const SkinDefs: Record<string, MeleeDef> = {
     fists: defineMeleeSkin("fists", {
         name: "Fists",
-        rarity: Rarity.Stock,
+        rarity: 0,
         lore: "The old one-two.",
     }),
     knuckles_rusted: defineMeleeSkin("knuckles", {
         name: "Knuckles Rusted",
-        rarity: Rarity.Uncommon,
+        rarity: 2,
         lore: "Rust up for the dust up.",
         noPotatoSwap: false,
         lootImg: {
@@ -1066,7 +1122,7 @@ const SkinDefs: Record<string, MeleeDef> = {
     }),
     knuckles_heroic: defineMeleeSkin("knuckles", {
         name: "Knuckles Heroic",
-        rarity: Rarity.Rare,
+        rarity: 3,
         lore: "Give 'em a hero sandwich.",
         noPotatoSwap: false,
         lootImg: {
@@ -1078,7 +1134,7 @@ const SkinDefs: Record<string, MeleeDef> = {
     }),
     karambit_rugged: defineMeleeSkin("karambit", {
         name: "Karambit Rugged",
-        rarity: Rarity.Rare,
+        rarity: 3,
         noPotatoSwap: false,
         anim: {
             idlePose: "slash",
@@ -1093,7 +1149,7 @@ const SkinDefs: Record<string, MeleeDef> = {
     }),
     karambit_prismatic: defineMeleeSkin("karambit", {
         name: "Karambit Prismatic",
-        rarity: Rarity.Epic,
+        rarity: 4,
         noPotatoSwap: false,
         lootImg: {
             sprite: "loot-melee-karambit-prismatic.img",
@@ -1104,7 +1160,7 @@ const SkinDefs: Record<string, MeleeDef> = {
     }),
     karambit_drowned: defineMeleeSkin("karambit", {
         name: "Karambit Drowned",
-        rarity: Rarity.Epic,
+        rarity: 4,
         noPotatoSwap: false,
         lootImg: {
             sprite: "loot-melee-karambit-drowned.img",
@@ -1115,7 +1171,7 @@ const SkinDefs: Record<string, MeleeDef> = {
     }),
     bayonet_rugged: defineMeleeSkin("bayonet", {
         name: "Bayonet Rugged",
-        rarity: Rarity.Rare,
+        rarity: 3,
         noPotatoSwap: false,
         lootImg: {
             sprite: "loot-melee-bayonet-rugged.img",
@@ -1126,7 +1182,7 @@ const SkinDefs: Record<string, MeleeDef> = {
     }),
     bayonet_woodland: defineMeleeSkin("bayonet", {
         name: "Bayonet Woodland",
-        rarity: Rarity.Epic,
+        rarity: 4,
         noPotatoSwap: false,
         lootImg: {
             sprite: "loot-melee-bayonet-woodland.img",
@@ -1137,7 +1193,7 @@ const SkinDefs: Record<string, MeleeDef> = {
     }),
     huntsman_rugged: defineMeleeSkin("huntsman", {
         name: "Huntsman Rugged",
-        rarity: Rarity.Rare,
+        rarity: 3,
         noPotatoSwap: false,
         lootImg: {
             sprite: "loot-melee-huntsman-rugged.img",
@@ -1148,7 +1204,7 @@ const SkinDefs: Record<string, MeleeDef> = {
     }),
     huntsman_burnished: defineMeleeSkin("huntsman", {
         name: "Huntsman Burnished",
-        rarity: Rarity.Epic,
+        rarity: 4,
         noPotatoSwap: false,
         lootImg: {
             sprite: "loot-melee-huntsman-burnished.img",
@@ -1159,7 +1215,7 @@ const SkinDefs: Record<string, MeleeDef> = {
     }),
     bowie_vintage: defineMeleeSkin("bowie", {
         name: "Bowie Vintage",
-        rarity: Rarity.Rare,
+        rarity: 3,
         noPotatoSwap: false,
         lootImg: { sprite: "loot-melee-bowie-vintage.img" },
         worldImg: {
@@ -1168,7 +1224,7 @@ const SkinDefs: Record<string, MeleeDef> = {
     }),
     bowie_frontier: defineMeleeSkin("bowie", {
         name: "Bowie Frontier",
-        rarity: Rarity.Epic,
+        rarity: 4,
         noPotatoSwap: false,
         lootImg: {
             sprite: "loot-melee-bowie-frontier.img",
@@ -1239,6 +1295,10 @@ const SkinDefs: Record<string, MeleeDef> = {
     crowbar_scout: defineMeleeSkin("crowbar", {
         name: "Scouting Crowbar",
         noPotatoSwap: false,
+        lootImg: { sprite: "loot-melee-crowbar-scout.img" },
+        worldImg: {
+            sprite: "loot-melee-crowbar-scout.img",
+        },
     }),
     crowbar_recon: defineMeleeSkin("crowbar", {
         name: "Crowbar Carbon",
