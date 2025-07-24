@@ -17,9 +17,12 @@ const mapDef: PartialMapDef = {
             { name: "piano_02", channel: "sfx" },
             { name: "log_03", channel: "sfx" },
             { name: "log_04", channel: "sfx" },
+            { name: "cell_control_03", channel: "sfx" },
             { name: "piano_music_01", channel: "ambient" },
+            { name: "howl_01", channel: "sfx" },
+            { name: "wheel_control_01", channel: "sfx" },
         ],
-        atlases: ["gradient", "loadout", "shared", "desert"],
+        atlases: ["gradient", "loadout", "shared", "desert", "savannah", "faction"],
     },
     biome: {
         colors: {
@@ -67,7 +70,6 @@ const mapDef: PartialMapDef = {
             { name: "ak47", count: 1, weight: 2.7 },
             { name: "scar", count: 1, weight: 0.01 },
             { name: "dp28", count: 1, weight: 0.5 },
-            { name: "bar", count: 1, weight: 0.25 },
             { name: "mosin", count: 1, weight: 0.1 },
             { name: "m39", count: 1, weight: 0.1 },
             { name: "m1a1", count: 1, weight: 10 },
@@ -89,7 +91,6 @@ const mapDef: PartialMapDef = {
             },
             { name: "groza", count: 1, weight: 0.8 },
             { name: "scout_elite", count: 1, weight: 0.05 },
-            { name: "mkg45", count: 1, weight: 0.1 },
         ],
         tier_airdrop_uncommon: [
             { name: "mk12", count: 1, weight: 2.5 },
@@ -105,12 +106,11 @@ const mapDef: PartialMapDef = {
             { name: "scout_elite", count: 1, weight: 1.5 },
             { name: "model94", count: 1, weight: 2 },
             { name: "colt45", count: 1, weight: 1 },
-            { name: "mkg45", count: 1, weight: 2.5 }, // !
         ],
         tier_airdrop_rare: [
             { name: "garand", count: 1, weight: 6 },
             { name: "awc", count: 1, weight: 3 },
-            { name: "pkp", count: 1, weight: 0.08 },
+            { name: "pkp", count: 1, weight: 3 },
             { name: "m249", count: 1, weight: 0.1 },
             { name: "m4a1", count: 1, weight: 4 },
             { name: "ots38_dual", count: 1, weight: 4.5 },
@@ -159,7 +159,6 @@ const mapDef: PartialMapDef = {
             { name: "ak47", count: 1, weight: 4 },
             { name: "scar", count: 1, weight: 0.27 },
             { name: "dp28", count: 1, weight: 0.55 },
-            { name: "bar", count: 1, weight: 0.55 },
             { name: "mosin", count: 1, weight: 0.55 },
             { name: "m39", count: 1, weight: 0.55 },
             { name: "saiga", count: 1, weight: 0.26 },
@@ -199,6 +198,10 @@ const mapDef: PartialMapDef = {
             { name: "fabricate", count: 1, weight: 1 },
             { name: "flak_jacket", count: 1, weight: 1 },
             { name: "bonus_45", count: 1, weight: 1 },
+        ],
+        tier_dm_helmet: [
+            { name: "helmet03", count: 1, weight: 9 },
+            { name: "helmet03_dm_desert", count: 1, weight: 1 },
         ],
     },
     mapGen: {
@@ -294,6 +297,7 @@ const mapDef: PartialMapDef = {
                 river_town_02: 1,
                 greenhouse_02: 1,
                 stone_05: 6,
+                savannah_patch_03: 2,
             },
         ],
         randomSpawns: [],

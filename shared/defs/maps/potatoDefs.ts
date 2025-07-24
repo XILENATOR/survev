@@ -28,7 +28,7 @@ const mapDef: PartialMapDef = {
             { name: "log_11", channel: "sfx" },
             { name: "log_12", channel: "sfx" },
         ],
-        atlases: ["gradient", "loadout", "shared", "main", "potato"],
+        atlases: ["gradient", "loadout", "shared", "main", "potato", "savannah"],
     },
     biome: {
         colors: {
@@ -151,6 +151,11 @@ const mapDef: PartialMapDef = {
             { name: "potato_cannon", count: 1, weight: 1 },
             { name: "potato_smg", count: 1, weight: 0.1 },
         ],
+        tier_dm_helmet: [
+            { name: "helmet03", count: 1, weight: 9 },
+            { name: "helmet03_dm_potato", count: 1, weight: 1 },
+            { name: "helmet03_potato", count: 1, weight: 1 },
+        ],
     },
     mapGen: {
         customSpawnRules: {
@@ -218,6 +223,7 @@ const mapDef: PartialMapDef = {
                 teahouse_complex_01s: { small: 1, large: 2 },
                 stone_04: 1,
                 club_complex_01: 1,
+                savannah_patch_02: 2,
             },
         ],
         randomSpawns: [

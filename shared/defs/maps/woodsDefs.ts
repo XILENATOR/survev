@@ -19,7 +19,7 @@ const mapDef: PartialMapDef = {
             { name: "footstep_09", channel: "sfx" },
             { name: "helmet03_forest_pickup_01", channel: "ui" },
         ],
-        atlases: ["gradient", "loadout", "shared", "woods"],
+        atlases: ["gradient", "loadout", "shared", "woods", "savannah"],
     },
     biome: {
         colors: {
@@ -72,7 +72,6 @@ const mapDef: PartialMapDef = {
             { name: "qbb97", count: 1, weight: 0.1 },
             { name: "bar", count: 1, weight: 3 },
             { name: "pkp", count: 1, weight: 0.005 },
-            { name: "m249", count: 1, weight: 0.008 },
         ],
         tier_ammo: [
             { name: "762mm", count: 60, weight: 3 },
@@ -114,7 +113,6 @@ const mapDef: PartialMapDef = {
             { name: "4xscope", count: 1, weight: 1 },
             { name: "8xscope", count: 1, weight: 0.5 },
             { name: "pkp", count: 1, weight: 0.05 },
-            { name: "m249", count: 1, weight: 0.05 },
         ],
         tier_airdrop_throwables: [
             { name: "frag", count: 2, weight: 1 },
@@ -147,6 +145,10 @@ const mapDef: PartialMapDef = {
             { name: "", count: 1, weight: 19 },
             { name: "stonehammer", count: 1, weight: 1 },
             { name: "pan", count: 1, weight: 1 },
+        ],
+        tier_dm_helmet: [
+            { name: "helmet03", count: 1, weight: 9 },
+            { name: "helmet03_dm_woods", count: 1, weight: 1 },
         ],
     },
     mapGen: {
@@ -237,6 +239,7 @@ const mapDef: PartialMapDef = {
                 tree_08: 1100,
                 tree_08b: 150,
                 tree_09: 84,
+                savannah_patch_02: 2,
             },
         ],
         randomSpawns: [],

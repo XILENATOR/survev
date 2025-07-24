@@ -167,6 +167,7 @@ export const Main: MapDef = {
             { name: "50AE", count: 21, weight: 1 },
             { name: "308sub", count: 5, weight: 1 },
             { name: "flare", count: 1, weight: 1 },
+            { name: "40mm", count: 5, weight: 1 },
         ],
         tier_vending_soda: [
             { name: "soda", count: 1, weight: 1 }, // ?
@@ -206,6 +207,7 @@ export const Main: MapDef = {
             { name: "m249", count: 1, weight: 1 },
             { name: "awc", count: 1, weight: 1 },
             { name: "pkp", count: 1, weight: 1 },
+            { name: "launcher", count: 1, weight: 1 },
         ],
         tier_eye_stone: [
             { name: "vector45", count: 1, weight: 1 },
@@ -235,7 +237,6 @@ export const Main: MapDef = {
             { name: "ak47", count: 1, weight: 2.7 },
             { name: "scar", count: 1, weight: 0.01 },
             { name: "dp28", count: 1, weight: 0.5 },
-            { name: "bar", count: 1, weight: 0.25 },
             { name: "mosin", count: 1, weight: 0.1 },
             { name: "m39", count: 1, weight: 0.1 },
             { name: "mp5", count: 1, weight: 10 },
@@ -258,7 +259,7 @@ export const Main: MapDef = {
             { name: "flare_gun_dual", count: 1, weight: 0.0025 }, // !
             { name: "groza", count: 1, weight: 0.8 },
             { name: "scout_elite", count: 1, weight: 0.05 },
-            { name: "vss", count: 1, weight: 0.1 }, // !
+            { name: "vss", count: 1, weight: 0.05 }, // !
         ],
         tier_police: [
             { name: "scar", count: 1, weight: 0.5 },
@@ -268,7 +269,8 @@ export const Main: MapDef = {
         ],
         tier_ring_case: [
             { name: "grozas", count: 1, weight: 0.75 }, // ?
-            { name: "ots38_dual", count: 1, weight: 0.15 }, // ?
+            { name: "ots38_dual", count: 1, weight: 0.15 },
+            { name: "launcher", count: 1, weight: 0.1 }, // ?
             { name: "pkp", count: 1, weight: 0.1 }, // ?
             { name: "m9", count: 1, weight: 0.01 }, // ?
         ],
@@ -280,7 +282,6 @@ export const Main: MapDef = {
             { name: "ak47", count: 1, weight: 4 },
             { name: "scar", count: 1, weight: 0.27 },
             { name: "dp28", count: 1, weight: 0.55 },
-            { name: "bar", count: 1, weight: 0.55 },
             { name: "mosin", count: 1, weight: 0.55 },
             { name: "m39", count: 1, weight: 0.55 },
             { name: "saiga", count: 1, weight: 0.26 },
@@ -306,7 +307,7 @@ export const Main: MapDef = {
         tier_pirate_melee: [{ name: "hook", count: 1, weight: 1 }],
         tier_hatchet: [
             { name: "vector", count: 1, weight: 0.4 },
-            { name: "bar", count: 1, weight: 0.25 },
+            { name: "hk416", count: 1, weight: 0.25 },
             { name: "mp220", count: 1, weight: 0.15 },
             { name: "pkp", count: 1, weight: 0.01 },
             { name: "m249", count: 1, weight: 0.01 },
@@ -476,7 +477,7 @@ export const Main: MapDef = {
             { name: "m9", count: 1, weight: 0.01 },
             { name: "flare_gun", count: 1, weight: 0.5 },
             { name: "scout_elite", count: 1, weight: 1.5 },
-            { name: "vss", count: 1, weight: 2.5 }, // !
+            { name: "vss", count: 1, weight: 1.5 }, // !
         ],
         tier_airdrop_rare: [
             { name: "garand", count: 1, weight: 6 },
@@ -564,11 +565,10 @@ export const Main: MapDef = {
         // xp and halloween perks guessed with no base on real data!
         tier_fruit_xp: [
             { name: "", count: 1, weight: 40 },
-            /* commented until we have a pass so the xp artifacts do something
+            /* commented until we have a pass so the xp artifacts do something - nah screw you lmao*/
             { name: "tier_xp_uncommon", count: 1, weight: 1 },
             { name: "tier_xp_rare", count: 1, weight: 0.1 },
             { name: "tier_xp_mythic", count: 1, weight: 0.001 },
-            */
         ],
         tier_airdrop_xp: [
             { name: "", count: 1, weight: 15 },
@@ -618,6 +618,63 @@ export const Main: MapDef = {
         tier_potato_perks: [
             { name: "", count: 1, weight: 25 },
             { name: "tier_perks", count: 1, weight: 1 },
+        ],
+        tier_cloud_01: [
+            { name: "model94", count: 1, weight: 8 },
+            { name: "mosin", count: 1, weight: 8 },
+            { name: "scout_elite", count: 1, weight: 8 },
+            { name: "mk12", count: 1, weight: 8 },
+            { name: "m39", count: 1, weight: 8 },
+            { name: "garand", count: 1, weight: 1 },
+            { name: "sv98", count: 1, weight: 1 },
+        ],
+        tier_cloud_02: [
+            { name: "", count: 1, weight: 3 },
+            { name: "outfitWheat", count: 1, weight: 1 },
+        ],
+        tier_snipers: [
+            { name: "model94", count: 1, weight: 24 },
+            { name: "blr", count: 1, weight: 24 },
+            { name: "mosin", count: 1, weight: 8 },
+            { name: "scout_elite", count: 1, weight: 8 },
+            { name: "mk12", count: 1, weight: 8 },
+            { name: "vss", count: 1, weight: 8 },
+            { name: "garand", count: 1, weight: 3 },
+            { name: "sv98", count: 1, weight: 3 },
+            { name: "svd", count: 1, weight: 3 },
+            { name: "l86", count: 1, weight: 3 },
+            { name: "awc", count: 1, weight: 1 },
+            { name: "scarssr", count: 1, weight: 1 },
+        ],
+        tier_dm_helmet: [
+            { name: "helmet03", count: 1, weight: 1 },
+        ],
+        tier_scavenger_custom: [
+            { name: "usas_ultra", count: 1, weight: 1 },
+            { name: "m1100_ultra", count: 1, weight: 0.01 },
+            { name: "m1014_ultra", count: 1, weight: 1 },
+            { name: "mirv_ultra", count: 1, weight: 2 },
+            { name: "launcher_cluster", count: 1, weight: 0.5 },
+            { name: "launcher", count: 1, weight: 1 },
+            { name: "smoke_gun", count: 1, weight: 2 },
+            { name: "fireworks", count: 1, weight: 1 },
+            { name: "golden_grenade", count: 1, weight: 1 },
+            { name: "vz61", count: 1, weight: 2 },
+            { name: "vz61", count: 2, weight: 1 },
+            { name: "pkp", count: 2, weight: 0.1 },
+            { name: "awc", count: 2, weight: 0.1 },
+        ],
+        tier_gear_custom: [
+            { name: "helmet03", count: 1, weight: 8 },
+            { name: "chest03", count: 1, weight: 8 },
+            { name: "backpack03", count: 1, weight: 8 },
+            { name: "helmet03_dm_woods", count: 1, weight: 1 },
+            { name: "helmet03_dm_potato", count: 1, weight: 1 },
+            { name: "helmet03_dm_desert", count: 1, weight: 1 },
+            { name: "chestultra", count: 1, weight: 0.1 },
+        ],
+        tier_15x: [
+            { name: "15xscope", count: 1, weight: 1 },
         ],
     },
     mapGen: {
