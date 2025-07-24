@@ -16,6 +16,8 @@ import { WoodsSnow } from "./maps/woodsSnowDefs";
 import { WoodsSpring } from "./maps/woodsSpringDefs";
 import { WoodsSummer } from "./maps/woodsSummerDefs";
 import type { MapId } from "./types/misc";
+import { PotatoFaction } from "./maps/potatoFactionDefs";
+import { Cursed } from "./maps/cursedDefs";
 
 export type Atlas =
     | "gradient"
@@ -48,6 +50,8 @@ export const MapDefs = {
     savannah: Savannah,
     cobalt: Cobalt,
     turkey: Turkey,
+    potato_faction: PotatoFaction,
+    cursed: Cursed,
 } satisfies Record<string, MapDef>;
 
 export interface MapDef {
@@ -153,7 +157,6 @@ export interface MapDef {
             name: string;
             count: number;
             weight: number;
-            preload?: boolean;
         }>
     >;
     mapGen: {
