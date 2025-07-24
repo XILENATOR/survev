@@ -652,4 +652,32 @@ const ExplosionEffectDefs: Record<string, ExplotionDef> = {
         shakeDur: 0.4,
         lifetime: 2,
     },
+    inferno: {
+        burst: {
+            particle: "explosionINFERNO",
+            scale: 5,
+            sound: {
+                grass: "explosion_01",
+                water: "explosion_02",
+            },
+        },
+        rippleCount: 10,
+        shakeStr: 0.65,
+        shakeDur: 1,
+        lifetime: 2,
+    },
+    invisible: {
+        burst: {
+            particle: "",
+            scale: 0,
+            sound: {
+                grass: "model94_01",
+                water: "model94_01",
+            },
+        },
+        rippleCount: 0,
+        shakeStr: 0,
+        shakeDur: 0.1,
+        lifetime: 1,
+    },
 };

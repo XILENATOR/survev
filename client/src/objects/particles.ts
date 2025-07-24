@@ -1849,6 +1849,44 @@ const ParticleDefs: Record<string, ParticleDef> = {
             return util.rgbToInt(util.hsvToRgb(0, 0, util.random(0.9, 0.95)));
         },
     },
+    "40mm": {
+        image: ["part-shell-01.img"],
+        life: new Range(0.5, 0.75),
+        drag: new Range(3, 4),
+        rotVel: new Range(Math.PI * 3, Math.PI * 3),
+        scale: {
+            start: 0.07,
+            end: 0.04,
+            lerp: new Range(0, 1),
+        },
+        alpha: {
+            start: 1,
+            end: 0,
+            lerp: new Range(0.95, 1),
+        },
+        color: function () {
+            return util.rgbToInt(util.hsvToRgb(0, 0, util.random(0.9, 0.95)));
+        },
+    },
+    "inferno": {
+        image: ["part-shell-01.img"],
+        life: new Range(0.5, 0.75),
+        drag: new Range(3, 4),
+        rotVel: new Range(Math.PI * 3, Math.PI * 3),
+        scale: {
+            start: 0.07,
+            end: 0.04,
+            lerp: new Range(0, 1),
+        },
+        alpha: {
+            start: 1,
+            end: 0,
+            lerp: new Range(0.95, 1),
+        },
+        color: function () {
+            return util.rgbToInt(util.hsvToRgb(0, 0, util.random(0.9, 0.95)));
+        },
+    },
     potato_ammo: {
         image: ["part-wedge-01.img"],
         life: new Range(0.5, 0.75),
@@ -2062,6 +2100,25 @@ const ParticleDefs: Record<string, ParticleDef> = {
             lerp: new Range(0.75, 1),
         },
         color: 0xc4a80a,
+    },
+    explosionINFERNO: {
+        image: ["part-frag-burst-01.img"],
+        life: 0.75,
+        drag: 0,
+        rotVel: 0,
+        scale: {
+            start: 1,
+            end: 4,
+            lerp: new Range(0, 1),
+        },
+        alpha: {
+            start: 1,
+            end: 0,
+            lerp: new Range(0.75, 1),
+        },
+        color: function () {
+            return util.rgbToInt(util.hsvToRgb(24, 1, 1));
+        },
     },
     airdropSmoke: {
         image: ["part-smoke-02.img", "part-smoke-03.img"],
