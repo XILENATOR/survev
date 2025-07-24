@@ -1,4 +1,3 @@
-import { Rarity } from "../../gameConfig";
 import { defineSkin } from "../../utils/util";
 
 export interface OutfitDef {
@@ -68,7 +67,7 @@ const SkinDefs: Record<string, OutfitDef> = {
     outfitBase: defineOutfitSkin("outfitBase", {
         noDropOnDeath: true,
         name: "Basic Outfit",
-        rarity: Rarity.Stock,
+        rarity: 0,
         lore: "Pure and simple.",
         lootImg: {
             sprite: "loot-shirt-outfitBase.img",
@@ -194,7 +193,7 @@ const SkinDefs: Record<string, OutfitDef> = {
             sprite: "loot-shirt-outfitTurkey.img",
             tint: 0xf0cebb,
         },
-        rarity: Rarity.Rare,
+        rarity: 3,
         lore: "M1100 not included.",
     }),
     outfitDev: defineOutfitSkin("outfitBase", {
@@ -214,7 +213,7 @@ const SkinDefs: Record<string, OutfitDef> = {
             sprite: "loot-shirt-outfitDev.img",
             tint: 0xffffff,
         },
-        rarity: Rarity.Mythic,
+        rarity: 5,
         lore: "Two-time limited edition print.",
     }),
     outfitMod: defineOutfitSkin("outfitBase", {
@@ -234,7 +233,7 @@ const SkinDefs: Record<string, OutfitDef> = {
             sprite: "loot-shirt-outfitMod.img",
             tint: 0xffffff,
         },
-        rarity: Rarity.Rare,
+        rarity: 3,
         lore: "For those who wield the power of the pan.",
     }),
     outfitWheat: defineOutfitSkin("outfitBase", {
@@ -581,7 +580,7 @@ const SkinDefs: Record<string, OutfitDef> = {
     }),
     outfitKhaki: defineOutfitSkin("outfitBase", {
         name: "The Initiative",
-        rarity: Rarity.Common,
+        rarity: 1,
         skinImg: {
             baseTint: 0xc3ae85,
             baseSprite: "player-base-02.img",
@@ -600,7 +599,7 @@ const SkinDefs: Record<string, OutfitDef> = {
     outfitParma: defineOutfitSkin("outfitBase", {
         name: "PARMA Jumpsuit",
         noDropOnDeath: true,
-        rarity: Rarity.Common,
+        rarity: 1,
         lore: "Next generation inversion.",
         skinImg: {
             baseTint: 0x857659,
@@ -620,7 +619,7 @@ const SkinDefs: Record<string, OutfitDef> = {
     outfitParmaPrestige: defineOutfitSkin("outfitBase", {
         name: "The Core Jumpsuit",
         noDropOnDeath: true,
-        rarity: Rarity.Rare,
+        rarity: 3,
         lore: "Special issue for staffers at Bunker 1.",
         skinImg: {
             baseTint: 0xe3c081,
@@ -690,7 +689,7 @@ const SkinDefs: Record<string, OutfitDef> = {
     }),
     outfitWoodland: defineOutfitSkin("outfitBase", {
         name: "Woodland Combat",
-        rarity: Rarity.Common,
+        rarity: 1,
         lore: "Common component of PARMA survival caches.",
         skinImg: {
             baseTint: 0x2b332a,
@@ -709,7 +708,7 @@ const SkinDefs: Record<string, OutfitDef> = {
     }),
     outfitRoyalFortune: defineOutfitSkin("outfitBase", {
         name: "Royal Fortune",
-        rarity: Rarity.Rare,
+        rarity: 3,
         skinImg: {
             baseTint: 0x7f2723,
             baseSprite: "player-base-01.img",
@@ -727,7 +726,7 @@ const SkinDefs: Record<string, OutfitDef> = {
     }),
     outfitKeyLime: defineOutfitSkin("outfitBase", {
         name: "Key Lime",
-        rarity: Rarity.Common,
+        rarity: 1,
         lore: "Not for eating.",
         skinImg: {
             baseTint: 0xc7ff3f,
@@ -746,7 +745,7 @@ const SkinDefs: Record<string, OutfitDef> = {
     }),
     outfitCobaltShell: defineOutfitSkin("outfitBase", {
         name: "Cobalt Shell",
-        rarity: Rarity.Common,
+        rarity: 1,
         lore: "It means bluish.",
         skinImg: {
             baseTint: 0x2b57,
@@ -766,7 +765,7 @@ const SkinDefs: Record<string, OutfitDef> = {
     outfitCarbonFiber: defineOutfitSkin("outfitBase", {
         name: "Carbon Fiber",
         noDropOnDeath: true,
-        rarity: Rarity.Uncommon,
+        rarity: 2,
         lore: "Military-grade, fine spun filament.",
         skinImg: {
             baseTint: 0x212121,
@@ -786,7 +785,7 @@ const SkinDefs: Record<string, OutfitDef> = {
     outfitDarkGloves: defineOutfitSkin("outfitBase", {
         name: "The Professional",
         noDropOnDeath: true,
-        rarity: Rarity.Uncommon,
+        rarity: 2,
         lore: "True survivrs wear the dark gloves.",
         skinImg: {
             baseTint: 0xf8c574,
@@ -806,7 +805,7 @@ const SkinDefs: Record<string, OutfitDef> = {
     outfitDarkShirt: defineOutfitSkin("outfitBase", {
         name: "The Semi-Pro",
         noDropOnDeath: true,
-        rarity: Rarity.Common,
+        rarity: 1,
         lore: "Some survivrs wear the dark shirt.",
         skinImg: {
             baseTint: 0xbe7800,
@@ -843,7 +842,7 @@ const SkinDefs: Record<string, OutfitDef> = {
     }),
     outfitDesertCamo: defineOutfitSkin("outfitBase", {
         name: "Desert Camo",
-        rarity: Rarity.Common,
+        rarity: 1,
         skinImg: {
             baseTint: 0xd19b4e,
             baseSprite: "player-base-01.img",
@@ -861,7 +860,7 @@ const SkinDefs: Record<string, OutfitDef> = {
     }),
     outfitCamo: defineOutfitSkin("outfitBase", {
         name: "Forest Camo",
-        rarity: Rarity.Common,
+        rarity: 1,
         lore: "Be one with the trees.",
         skinImg: {
             baseTint: 0x999966,
@@ -881,7 +880,7 @@ const SkinDefs: Record<string, OutfitDef> = {
     outfitRed: defineOutfitSkin("outfitBase", {
         name: "Target Practice",
         noDropOnDeath: true,
-        rarity: Rarity.Common,
+        rarity: 1,
         lore: "On the plus side, they won't see you bleed.",
         skinImg: {
             baseTint: 0xff0000,
@@ -901,7 +900,7 @@ const SkinDefs: Record<string, OutfitDef> = {
     outfitWhite: defineOutfitSkin("outfitBase", {
         name: "Arctic Avenger",
         noDropOnDeath: true,
-        rarity: Rarity.Common,
+        rarity: 1,
         lore: "No business like snow business.",
         skinImg: {
             baseTint: 0xe3e3e3,
@@ -1092,6 +1091,34 @@ const SkinDefs: Record<string, OutfitDef> = {
         baseScale: 1,
         lootImg: {
             tint: 0xa9621d,
+        },
+    }),
+    outfitTest: defineOutfitSkin("outfitBase", {
+        name: "The Thiccest Dud",
+        obstacleType: "airdrop_crate_03po",
+        baseScale: 1,
+        lootImg: {
+            tint: 0xa9621d,
+        },
+    }),
+    outfitSky: defineOutfitSkin("outfitBase", {
+        name: "Skyful Costume",
+        noDropOnDeath: true,
+        rarity: 3,
+        lore: "Gives off the true feelings of the sky.",
+        skinImg: {
+            baseTint: 0x0ee9ed,
+            baseSprite: "player-base-02.img",
+            handTint: 0xffffff,
+            handSprite: "player-hands-02.img",
+            footTint: 0x03fc94,
+            footSprite: "player-feet-02.img",
+            backpackTint: 0x006675,
+            backpackSprite: "player-circle-base-02.img",
+        },
+        lootImg: {
+            sprite: "loot-shirt-01.img",
+            tint: 0x0ee9ed,
         },
     }),
 };

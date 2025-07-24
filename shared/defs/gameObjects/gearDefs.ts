@@ -27,7 +27,7 @@ const ChestDefs: Record<string, ChestDef> = {
         level: 1,
         damageReduction: 0.25,
         skinImg: {
-            baseTint: 0xb4b4b4,
+            baseTint: 11842740,
             baseSprite: "player-armor-base-01.img",
         },
         lootImg: {
@@ -47,7 +47,7 @@ const ChestDefs: Record<string, ChestDef> = {
         level: 2,
         damageReduction: 0.38,
         skinImg: {
-            baseTint: 0x4b4b4b,
+            baseTint: 4934475,
             baseSprite: "player-armor-base-01.img",
         },
         lootImg: {
@@ -67,7 +67,7 @@ const ChestDefs: Record<string, ChestDef> = {
         level: 3,
         damageReduction: 0.45,
         skinImg: {
-            baseTint: 0x000,
+            baseTint: 0,
             baseSprite: "player-armor-base-01.img",
         },
         lootImg: {
@@ -88,13 +88,33 @@ const ChestDefs: Record<string, ChestDef> = {
         level: 4,
         damageReduction: 0.6,
         skinImg: {
-            baseTint: 0x1c2e06,
+            baseTint: 1846790,
             baseSprite: "player-armor-base-01.img",
         },
         lootImg: {
             sprite: "loot-chest-03.img",
             tint: 0xffffff,
             border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.2,
+        },
+        sound: {
+            pickup: "chest_pickup_01",
+        },
+    },
+    chestultra: {
+        name: "Ultra Vest",
+        type: "chest",
+        level: 99,
+        damageReduction: 0.999,
+        skinImg: {
+            baseTint: 1846790,
+            baseSprite: "player-armor-base-01.img",
+        },
+        lootImg: {
+            sprite: "loot-chest-03.img",
+            tint: 0xffffff,
+            border: "loot-circle-outer-05.img",
             borderTint: 0,
             scale: 0.2,
         },
@@ -133,9 +153,9 @@ const HelmetDefs: Record<string, HelmetDef> = {
         level: 1,
         damageReduction: 0.25,
         skinImg: {
-            baseTint: 0x317fff,
-            baseTintRed: 0xa76b6b,
-            baseTintBlue: 0x6290be,
+            baseTint: 3244031,
+            baseTintRed: 10972011,
+            baseTintBlue: 6459582,
             baseSprite: "player-circle-base-01.img",
         },
         lootImg: {
@@ -155,9 +175,9 @@ const HelmetDefs: Record<string, HelmetDef> = {
         level: 2,
         damageReduction: 0.4,
         skinImg: {
-            baseTint: 0xc6c6c6,
-            baseTintRed: 0x990000,
-            baseTintBlue: 0x50a2,
+            baseTint: 13027014,
+            baseTintRed: 10027008,
+            baseTintBlue: 20642,
             baseSprite: "player-circle-base-01.img",
         },
         lootImg: {
@@ -177,9 +197,9 @@ const HelmetDefs: Record<string, HelmetDef> = {
         level: 3,
         damageReduction: 0.55,
         skinImg: {
-            baseTint: 0x252525,
-            baseTintRed: 0x260404,
-            baseTintBlue: 0x5192d,
+            baseTint: 2434341,
+            baseTintRed: 2491396,
+            baseTintBlue: 334125,
             baseSprite: "player-circle-base-01.img",
         },
         lootImg: {
@@ -199,9 +219,9 @@ const HelmetDefs: Record<string, HelmetDef> = {
         level: 4,
         damageReduction: 0.7,
         skinImg: {
-            baseTint: 0x252525,
-            baseTintRed: 0x260404,
-            baseTintBlue: 0x5192d,
+            baseTint: 2434341,
+            baseTintRed: 2491396,
+            baseTintBlue: 334125,
             baseSprite: "player-circle-base-01.img",
         },
         lootImg: {
@@ -221,6 +241,7 @@ export interface BackpackDef {
     name: string;
     type: "backpack";
     level: number;
+    noDrop?: boolean,
     playerRad: number;
     tint: number;
     lootImg: LootImg;
@@ -252,7 +273,7 @@ const BackpackDefs: Record<string, BackpackDef> = {
         type: "backpack",
         level: 1,
         playerRad: 0.65,
-        tint: 0x663300,
+        tint: 6697728,
         lootImg: {
             sprite: "loot-pack-01.img",
             tint: 0xffffff,
@@ -268,7 +289,7 @@ const BackpackDefs: Record<string, BackpackDef> = {
         name: "Regular Pack",
         type: "backpack",
         level: 2,
-        tint: 0x6600,
+        tint: 26112,
         playerRad: 0.85,
         lootImg: {
             sprite: "loot-pack-02.img",
@@ -285,8 +306,26 @@ const BackpackDefs: Record<string, BackpackDef> = {
         name: "Military Pack",
         type: "backpack",
         level: 3,
-        tint: 0x666633,
+        tint: 6710835,
         playerRad: 1,
+        lootImg: {
+            sprite: "loot-pack-03.img",
+            tint: 0xffffff,
+            border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.2,
+        },
+        sound: {
+            pickup: "pack_pickup_01",
+        },
+    },
+    backpack04: {
+        name: "Travelling Pack",
+        type: "backpack",
+        level: 4,
+        noDrop: true,
+        tint: 6710835,
+        playerRad: 1.15,
         lootImg: {
             sprite: "loot-pack-03.img",
             tint: 0xffffff,
@@ -334,7 +373,7 @@ const BoostDefs: Record<string, BoostDef> = {
         emitter: "boost",
         aura: {
             sprite: "part-aura-circle-01.img",
-            tint: 0x199500,
+            tint: 1676544,
         },
     },
     painkiller: {
@@ -356,7 +395,7 @@ const BoostDefs: Record<string, BoostDef> = {
         emitter: "boost",
         aura: {
             sprite: "part-aura-circle-01.img",
-            tint: 0x199500,
+            tint: 1676544,
         },
     },
 };
@@ -413,7 +452,7 @@ const HealDefs: Record<string, HealDef> = {
         emitter: "heal",
         aura: {
             sprite: "part-aura-circle-01.img",
-            tint: 0xff0000,
+            tint: 16711680,
         },
     },
     healthkit: {
@@ -436,7 +475,7 @@ const HealDefs: Record<string, HealDef> = {
         emitter: "heal",
         aura: {
             sprite: "part-aura-circle-01.img",
-            tint: 0xff0000,
+            tint: 16711680,
         },
     },
 };
@@ -461,8 +500,8 @@ const AmmoDefs: Record<string, AmmoDef> = {
         lootImg: {
             sprite: "loot-ammo-box.img",
             scale: 0.2,
-            tint: 0xffae00,
-            tintDark: 0xbf8300,
+            tint: 16756224,
+            tintDark: 12550912,
         },
         sound: {
             pickup: "ammo_pickup_01",
@@ -475,8 +514,8 @@ const AmmoDefs: Record<string, AmmoDef> = {
         lootImg: {
             sprite: "loot-ammo-box.img",
             scale: 0.2,
-            tint: 0x66ff,
-            tintDark: 0x4dbf,
+            tint: 26367,
+            tintDark: 19903,
         },
         sound: {
             pickup: "ammo_pickup_01",
@@ -489,8 +528,8 @@ const AmmoDefs: Record<string, AmmoDef> = {
         lootImg: {
             sprite: "loot-ammo-box.img",
             scale: 0.2,
-            tint: 0x39e00,
-            tintDark: 0x27700,
+            tint: 237056,
+            tintDark: 161536,
         },
         sound: {
             pickup: "ammo_pickup_01",
@@ -503,8 +542,8 @@ const AmmoDefs: Record<string, AmmoDef> = {
         lootImg: {
             sprite: "loot-ammo-box.img",
             scale: 0.2,
-            tint: 0xff0000,
-            tintDark: 0xbf0000,
+            tint: 16711680,
+            tintDark: 12517376,
         },
         sound: {
             pickup: "ammo_pickup_01",
@@ -518,8 +557,8 @@ const AmmoDefs: Record<string, AmmoDef> = {
         lootImg: {
             sprite: "loot-ammo-box.img",
             scale: 0.2,
-            tint: 0x292929,
-            tintDark: 0x1f1f1f,
+            tint: 2697513,
+            tintDark: 2039583,
         },
         sound: {
             pickup: "ammo_pickup_01",
@@ -533,8 +572,8 @@ const AmmoDefs: Record<string, AmmoDef> = {
         lootImg: {
             sprite: "loot-ammo-box.img",
             scale: 0.2,
-            tint: 0x313800,
-            tintDark: 0x252b00,
+            tint: 3225600,
+            tintDark: 2435840,
         },
         sound: {
             pickup: "ammo_pickup_01",
@@ -548,8 +587,8 @@ const AmmoDefs: Record<string, AmmoDef> = {
         lootImg: {
             sprite: "loot-ammo-box.img",
             scale: 0.2,
-            tint: 0xd44600,
-            tintDark: 0xd44600,
+            tint: 13911552,
+            tintDark: 13911552,
         },
         sound: {
             pickup: "ammo_pickup_01",
@@ -563,8 +602,8 @@ const AmmoDefs: Record<string, AmmoDef> = {
         lootImg: {
             sprite: "loot-ammo-box.img",
             scale: 0.2,
-            tint: 0x7900ff,
-            tintDark: 0x5b00bf,
+            tint: 7930111,
+            tintDark: 5963967,
         },
         sound: {
             pickup: "ammo_pickup_01",
@@ -579,8 +618,39 @@ const AmmoDefs: Record<string, AmmoDef> = {
         lootImg: {
             sprite: "loot-ammo-box.img",
             scale: 0.2,
-            tint: 0x743f1e,
-            tintDark: 0x743f1e,
+            tint: 7618334,
+            tintDark: 7618334,
+        },
+        sound: {
+            pickup: "ammo_pickup_01",
+        },
+    },
+    "40mm": {
+        name: "40mm",
+        type: "ammo",
+        special: true,
+        minStackSize: 10,
+        lootImg: {
+            sprite: "loot-ammo-box.img",
+            scale: 0.2,
+            tint: 843179,
+            tintDark: 843179,
+        },
+        sound: {
+            pickup: "ammo_pickup_01",
+        },
+    },
+    "inferno": {
+        name: "Inferno",
+        type: "ammo",
+        special: true,
+        hideUi: true,
+        minStackSize: 1,
+        lootImg: {
+            sprite: "loot-ammo-box.img",
+            scale: 0.2,
+            tint: 13911568,
+            tintDark: 13911568,
         },
         sound: {
             pickup: "ammo_pickup_01",
@@ -683,6 +753,36 @@ const ScopeDefs: Record<string, ScopeDef> = {
             pickup: "scope_pickup_01",
         },
     },
+    /*"30xscope": {
+        name: "30x Scope",
+        type: "scope",
+        level: 30,
+        lootImg: {
+            sprite: "loot-scope-04.img",
+            tint: 0xffffff,
+            border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.2,
+        },
+        sound: {
+            pickup: "scope_pickup_01",
+        },
+    },
+    "999xscope": {
+        name: "999x Scope",
+        type: "scope",
+        level: 999,
+        lootImg: {
+            sprite: "loot-scope-04.img",
+            tint: 0xffffff,
+            border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.2,
+        },
+        sound: {
+            pickup: "scope_pickup_01",
+        },
+    },*/
 };
 
 const SkinDefs = {
@@ -700,9 +800,9 @@ const SkinDefs = {
         role: "woods_king",
         mapIndicator: {
             sprite: "player-king-woods.img",
-            tint: 0xff00,
+            tint: 65280,
             pulse: true,
-            pulseTint: 0xff00,
+            pulseTint: 65280,
         },
         skinImg: {
             baseTint: 0xffffff,
@@ -851,6 +951,7 @@ const SkinDefs = {
     }),
     helmet04_last_man_red: defineSkin("helmet04", {
         name: "Lone Survivr Helmet",
+        role: "last_man",
         noDrop: true,
         skinImg: {
             baseTint: 0xffffff,
@@ -867,6 +968,7 @@ const SkinDefs = {
     }),
     helmet04_last_man_blue: defineSkin("helmet04", {
         name: "Lone Survivr Helmet",
+        role: "last_man",
         noDrop: true,
         skinImg: {
             baseTint: 0xffffff,
@@ -897,20 +999,63 @@ const SkinDefs = {
             rot: 0.5 * Math.PI,
         },
     }),
-    helmet04_captain: defineSkin("helmet04", {
-        name: "Captain Helmet",
+    helmet03_dm_desert: defineSkin("helmet03", {
+        name: "Marksman Helmet",
+        noDrop: false,
+        perk: "endless_ammo",
+        skinImg: {
+            baseTint: 0xffffff,
+            baseTintRed: 0xffffff,
+            baseTintBlue: 0xffffff,
+            baseSprite: "img/loot/player-helmet-dm-01.svg",
+            spriteScale: 0.3,
+        },
+        lootImg: {
+            sprite: "img/loot/player-helmet-dm-01.svg",
+            rot: 0.5 * Math.PI,
+        },
+    }),
+    helmet03_dm_woods: defineSkin("helmet03", {
+        name: "Marksman Helmet",
+        noDrop: false,
+        perk: "splinter",
+        skinImg: {
+            baseTint: 0xffffff,
+            baseTintRed: 0xffffff,
+            baseTintBlue: 0xffffff,
+            baseSprite: "img/loot/player-helmet-dm-02.svg",
+            spriteScale: 0.3,
+        },
+        lootImg: {
+            sprite: "img/loot/player-helmet-dm-02.svg",
+            rot: 0.5 * Math.PI,
+        },
+    }),
+    helmet03_dm_potato: defineSkin("helmet03", {
+        name: "Marksman Helmet",
+        noDrop: false,
+        perk: "small_arms",
+        skinImg: {
+            baseTint: 0xffffff,
+            baseTintRed: 0xffffff,
+            baseTintBlue: 0xffffff,
+            baseSprite: "img/loot/player-helmet-dm-03.svg",
+            spriteScale: 0.3,
+        },
+        lootImg: {
+            sprite: "img/loot/player-helmet-dm-03.svg",
+            rot: 0.5 * Math.PI,
+        },
+    }),
+    helmet03_smoker: defineSkin("helmet03", {
+        name: "Smoker Helmet",
         noDrop: true,
         skinImg: {
             baseTint: 0xffffff,
             baseTintRed: 0xffffff,
             baseTintBlue: 0xffffff,
-            baseSprite: "player-helmet-captain.img",
+            baseSprite: "player-helmet-moon.img",
             spriteScale: 0.3,
-        },
-        lootImg: {
-            sprite: "player-helmet-captain.img",
-            scale: 0.3,
-            rot: 0.5 * Math.PI,
         },
     }),
 };
