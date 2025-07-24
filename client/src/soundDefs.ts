@@ -765,6 +765,32 @@ const Sounds: Record<string, Record<string, SoundDef>> = {
             maxInstances: 3,
             preload: false,
         },
+        m134_01: {
+            path: "audio/guns/m134_01.mp3",
+            volume: 1,
+            maxInstances: 5,
+        },
+        m134_reload_01: {
+            path: "audio/guns/m134_reload_01.mp3",
+            volume: 1,
+        },
+        rainbow_blaster_loading: {
+            path: "audio/guns/rainbow_blaster_loading.mp3",
+            volume: 1,
+        },
+        inferno_artillery_01: {
+            path: "audio/guns/inferno_artillery_01.mp3",
+            volume: 1,
+        },
+        radio_01: {
+            path: "audio/guns/radio_01.mp3",
+            volume: 1,
+            maxInstances: 5,
+        },
+        radio_reload_01: {
+            path: "audio/guns/radio_reload_01.mp3",
+            volume: 1,
+        },
         empty_fire_01: {
             path: "audio/guns/empty_fire_01.mp3",
             volume: 0.9,
@@ -1415,6 +1441,11 @@ const Sounds: Record<string, Record<string, SoundDef>> = {
             volume: 1,
             preload: false,
         },
+        footstep_07: {
+            path: "audio/sfx/footstep_07.mp3",
+            volume: 1,
+            preload: false,
+        },
         footstep_08: {
             path: "audio/sfx/footstep_08.mp3",
             volume: 1,
@@ -1483,6 +1514,16 @@ const Sounds: Record<string, Record<string, SoundDef>> = {
         log_14: {
             path: "audio/sfx/log_14.mp3",
             volume: 2,
+            preload: false,
+        },
+        log_15: {
+            path: "audio/sfx/log_15.mp3",
+            volume: 2,
+            preload: false,
+        },
+        cell_control_03: {
+            path: "audio/sfx/cell_control_03.mp3",
+            volume: 1,
             preload: false,
         },
         ability_stim_01: {
@@ -1722,11 +1763,6 @@ const Sounds: Record<string, Record<string, SoundDef>> = {
         leader_dead_01: {
             path: "audio/ui/leader_dead_01.mp3",
             volume: 1.75,
-            maxInstances: 1,
-        },
-        captain_assigned_01: {
-            path: "audio/ui/captain_assigned_01.mp3",
-            volume: 2,
             maxInstances: 1,
         },
         lt_assigned_01: {
